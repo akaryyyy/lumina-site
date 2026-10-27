@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA Sanctuary & Eco Lodge | Hospedagem Exclusiva nas Montanhas</title>
+  <meta name="description" content="Refúgios de alto padrão na natureza: domos geodésicos transparentes, chalés nórdicos com lareira, piscinas de borda infinita e alta gastronomia sustentável.">
+  <meta name="keywords" content="hospedagem, chalé de luxo, glamping, domo geodésico, eco resort, refúgio na montanha, turismo sustentável">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'/></svg>">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="LUMINA Sanctuary & Eco Lodge | Hospedagem Exclusiva">
+  <meta property="og:description" content="Viva momentos inesquecíveis sob cúpulas de vidro com vista para as estrelas e piscinas de borda infinita na montanha.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20hospedagem%20no%20Lumina." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-action-btn" 
+     title="Conversar no WhatsApp"
+     aria-label="Atendimento via WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.05-1.07l-.29-.17-3.12.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.26-4.47c0-4.54 3.7-8.24 8.24-8.24zm4.51 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.16-.48-.28z"/>
+    </svg>
+  </a>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo" aria-label="Lumina Eco Sanctuary">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+          </svg>
+        </div>
+        <span class="brand-text">LUMINA<span>.</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#acomodacoes" class="nav-link">Acomodações</a>
+        <a href="#experiencias" class="nav-link">Experiências</a>
+        <a href="#calculadora" class="nav-link">Simular Estadia</a>
+        <a href="#sobre" class="nav-link">Santuário</a>
+        <a href="#depoimentos" class="nav-link">Avaliações</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Ambient Sound Toggle -->
+        <button id="sound-toggle" class="btn-icon sound-toggle" title="Ouvir som ambiente de natureza" aria-label="Ligar som ambiente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="theme-toggle" class="btn-icon" title="Alternar tema" aria-label="Mudar tema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="#acomodacoes" class="btn btn-primary btn-sm">Reservar Agora</a>
+
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-background">
+      <img src="assets/images/hero.jpg" alt="Domo geodésico Lumina sob céu estrelado" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <svg class="star-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+        <span>Eleito o Melhor Refúgio Ecológico nas Montanhas 2026</span>
+      </div>
+
+      <h1 class="hero-title">
+        Onde o Silêncio da Floresta Encontra o <em>Luxo Absoluto</em>.
+      </h1>
+
+      <p class="hero-description">
+        Desconecte-se do ritmo acelerado. Viva a magia de dormir sob cúpulas de vidro transparentes, relaxar em ofurôs com vista para as montanhas e saborear a alta gastronomia sustentável.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#acomodacoes" class="btn btn-primary">
+          <span>Explorar Acomodações</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#calculadora" class="btn btn-secondary">
+          <span>Simular Orçamento</span>
+        </a>
+      </div>
+
+      <!-- Quick Booking Search Card -->
+      <div class="booking-search-bar">
+        <form class="booking-form" id="hero-search-form" onsubmit="return false;">
+          <div class="booking-field">
+            <label for="search-checkin">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Check-in
+            </label>
+            <input type="date" id="search-checkin" class="booking-input" required>
+          </div>
+
+          <div class="booking-field">
+            <label for="search-checkout">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              Check-out
+            </label>
+            <input type="date" id="search-checkout" class="booking-input" required>
+          </div>
+
+          <div class="booking-field">
+            <label for="search-guests">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Hóspedes
+            </label>
+            <select id="search-guests" class="booking-select">
+              <option value="2">2 Hóspedes (Casal)</option>
+              <option value="1">1 Hóspede</option>
+              <option value="3">3 Hóspedes</option>
+              <option value="4">4 Hóspedes (Família)</option>
+              <option value="6">6 Hóspedes (Grupo VIP)</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="search-category">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Categoria
+            </label>
+            <select id="search-category" class="booking-select">
+              <option value="all">Todas as Acomodações</option>
+              <option value="domo">Domos Geodésicos</option>
+              <option value="chale">Chalés Nórdicos</option>
+              <option value="villa">Villas Panorâmicas</option>
+              <option value="cabana">Cabanas do Lago</option>
+            </select>
+          </div>
+
+          <button type="button" id="hero-search-btn" class="btn btn-primary booking-btn">
+            <span>Buscar Estadia</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Features Highlights Strip
+       ======================================================================== -->
+  <section class="features-strip">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          </svg>
+        </div>
+        <div>
+          <h4 class="feature-title">100% Sustentável</h4>
+          <p class="feature-desc">Energia solar limpa e pegada de carbono neutra</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <div>
+          <h4 class="feature-title">Avaliação 4.98 ★</h4>
+          <p class="feature-desc">Mais de 1.200 experiências memoráveis</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div>
+          <h4 class="feature-title">Farm-to-Table</h4>
+          <p class="feature-desc">Café artesanal e gastronomia orgânica local</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+          </svg>
+        </div>
+        <div>
+          <h4 class="feature-title">Wi-Fi Starlink 350 Mbps</h4>
+          <p class="feature-desc">Conexão ultrarrápida para trabalho ou streaming</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Accommodations Section
+       ======================================================================== -->
+  <section class="section" id="acomodacoes">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Refúgios de Assinatura</span>
+        <h2 class="section-title">Acomodações Projetadas para Encantar</h2>
+        <p class="section-subtitle">
+          Cada cabana e domo foi desenhado para maximizar a comunhão com a natureza sem abrir mão de nenhum conforto contemporâneo.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filters-bar">
+        <button class="filter-btn active" data-filter="all">Todas as Acomodações</button>
+        <button class="filter-btn" data-filter="domo">Domos Geodésicos</button>
+        <button class="filter-btn" data-filter="chale">Chalés Nórdicos</button>
+        <button class="filter-btn" data-filter="villa">Villas Panorâmicas</button>
+        <button class="filter-btn" data-filter="cabana">Cabanas do Lago</button>
+      </div>
+
+      <!-- Dynamic Cards Grid -->
+      <div class="accommodations-grid" id="rooms-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Experiences Showcase Section
+       ======================================================================== -->
+  <section class="section experiences-section" id="experiencias">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag gold">Momentos Memoráveis</span>
+        <h2 class="section-title">Experiências Imersivas no Santuário</h2>
+        <p class="section-subtitle">
+          Mais do que uma hospedagem: um convite para vivenciar momentos que renovam a alma e despertam os sentidos.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <div class="exp-card">
+          <img src="assets/images/spa-wellness.jpg" alt="Banho termal na floresta" class="exp-card-bg" loading="lazy">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Bem-estar & Relaxamento</span>
+            <h3 class="exp-title">Spa & Banhos Termais na Floresta</h3>
+            <p class="exp-desc">
+              Banheiras esculpidas em rocha vulcânica natural aquecidas com óleos essenciais de lavanda e pinho, cercadas pela névoa da manhã.
+            </p>
+            <a href="#calculadora" class="btn btn-secondary btn-sm">Incluir na Minha Estadia</a>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <img src="assets/images/jantar-estrelas.jpg" alt="Jantar sob as estrelas" class="exp-card-bg" loading="lazy">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Gastronomia Privativa</span>
+            <h3 class="exp-title">Jantar sob as Estrelas</h3>
+            <p class="exp-desc">
+              Menu degustação em 5 tempos preparado ao ar livre pelo nosso chef executivo, harmonizado com vinhos selecionados de altitude.
+            </p>
+            <a href="#calculadora" class="btn btn-secondary btn-sm">Incluir na Minha Estadia</a>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <img src="assets/images/chale-aurora.jpg" alt="Noite aconchegante na lareira" class="exp-card-bg" loading="lazy">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Aconchego Nórdico</span>
+            <h3 class="exp-title">Noites de Lareira & Cinema Privativo</h3>
+            <p class="exp-desc">
+              Assista seus filmes favoritos em projetores 4K embutidos enquanto a lenha estala e você aprecia chocolates artesanais e queijos locais.
+            </p>
+            <a href="#acomodacoes" class="btn btn-secondary btn-sm">Ver Chalés Nórdicos</a>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <img src="assets/images/cabana-lago.jpg" alt="Ofurô de cedro à beira do lago" class="exp-card-bg" loading="lazy">
+          <div class="exp-card-overlay"></div>
+          <div class="exp-card-content">
+            <span class="exp-tag">Aventuras Aquáticas</span>
+            <h3 class="exp-title">Ofurô & Caiaques no Lago Privado</h3>
+            <p class="exp-desc">
+              Navegue pelas águas cristalinas ao nascer do sol e termine o dia imerso em um ofurô tradicional de cedro japonês com hidromassagem.
+            </p>
+            <a href="#acomodacoes" class="btn btn-secondary btn-sm">Ver Cabanas do Lago</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Interactive Stay Calculator & Pricing Simulator
+       ======================================================================== -->
+  <section class="section" id="calculadora">
+    <div class="container">
+      <div class="calculator-card">
+        <div class="calc-left">
+          <span class="badge-tag">Simulador em Tempo Real</span>
+          <h3>Calcule sua Estadia Personalizada</h3>
+          <p>
+            Escolha as datas, a acomodação desejada e personalize com experiências exclusivas. O valor final é atualizado instantaneamente!
+          </p>
+
+          <div class="calc-inputs-grid">
+            <div class="booking-field">
+              <label for="calc-room">Acomodação</label>
+              <select id="calc-room" class="booking-select">
+                <option value="domo-estelar">Domo Geodésico Estelar (R$ 890/noite)</option>
+                <option value="chale-aurora">Chalé Aurora Escandinavo (R$ 1.150/noite)</option>
+                <option value="villa-infinity">Villa Panorâmica Infinity (R$ 2.450/noite)</option>
+                <option value="cabana-lago">Cabana Bosque do Lago (R$ 980/noite)</option>
+              </select>
+            </div>
+
+            <div class="booking-field">
+              <label for="calc-guests">Número de Hóspedes</label>
+              <select id="calc-guests" class="booking-select">
+                <option value="2">2 Pessoas</option>
+                <option value="1">1 Pessoa</option>
+                <option value="3">3 Pessoas</option>
+                <option value="4">4 Pessoas</option>
+                <option value="6">6 Pessoas</option>
+              </select>
+            </div>
+
+            <div class="booking-field">
+              <label for="calc-checkin">Data de Entrada</label>
+              <input type="date" id="calc-checkin" class="booking-input">
+            </div>
+
+            <div class="booking-field">
+              <label for="calc-checkout">Data de Saída</label>
+              <input type="date" id="calc-checkout" class="booking-input">
+            </div>
+          </div>
+
+          <div class="calc-extras">
+            <div class="calc-extras-title">Experiências & Serviços Opcionais:</div>
+            <div class="extras-list">
+              <label class="extra-option">
+                <div class="extra-label">
+                  <input type="checkbox" class="extra-checkbox" data-price="180">
+                  <span>Cesta Gourmet de Boas-Vindas (Vinho fino, queijos artesanais e frutas)</span>
+                </div>
+                <span class="extra-price">+ R$ 180</span>
+              </label>
+
+              <label class="extra-option">
+                <div class="extra-label">
+                  <input type="checkbox" class="extra-checkbox" data-price="450">
+                  <span>Sessão de Spa dos Namorados no Bosque (Massagem dupla + Óleos)</span>
+                </div>
+                <span class="extra-price">+ R$ 450</span>
+              </label>
+
+              <label class="extra-option">
+                <div class="extra-label">
+                  <input type="checkbox" class="extra-checkbox" data-price="380">
+                  <span>Jantar Romântico Privativo com Chef na Cabana</span>
+                </div>
+                <span class="extra-price">+ R$ 380</span>
+              </label>
+
+              <label class="extra-option">
+                <div class="extra-label">
+                  <input type="checkbox" class="extra-checkbox" data-price="250">
+                  <span>Traslado 4x4 Privativo (Ida e Volta da Rodoviária / Aeroporto)</span>
+                </div>
+                <span class="extra-price">+ R$ 250</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Column -->
+        <div class="calc-summary-box">
+          <div class="summary-title">Resumo da Simulação</div>
+
+          <div class="summary-row">
+            <span>Acomodação:</span>
+            <span id="summary-room-name" class="summary-val">Domo Geodésico Estelar</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Duração:</span>
+            <span id="summary-nights" class="summary-val">3 noites</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Diárias:</span>
+            <span id="summary-room-cost" class="summary-val">R$ 2.670</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Serviços Adicionais:</span>
+            <span id="summary-extras-cost" class="summary-val">R$ 0</span>
+          </div>
+
+          <!-- Coupon Row (Hidden by default, shown when coupon is valid) -->
+          <div class="summary-row" id="summary-discount-row" style="display: none; color: #10b981; font-weight: 600;">
+            <span>Desconto Especial:</span>
+            <span id="summary-discount-val">- R$ 0</span>
+          </div>
+
+          <!-- Coupon input -->
+          <div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.35rem;">Cupom de Desconto:</div>
+            <div class="coupon-group">
+              <input type="text" id="coupon-code" class="coupon-input" placeholder="Ex: LUMINA10">
+              <button type="button" id="apply-coupon-btn" class="coupon-btn">Aplicar</button>
+            </div>
+            <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 0.3rem;">Dica: use o código <strong>LUMINA10</strong> para 10% OFF</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-total">
+            <span class="total-label">Total Estimado:</span>
+            <span class="total-value" id="summary-total-price">R$ 2.670</span>
+          </div>
+
+          <button class="btn btn-gold" onclick="startBooking(document.getElementById('calc-room').value)">
+            <span>Prosseguir com Reserva</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       About & Sanctuary
+       ======================================================================== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-stack">
+          <img src="assets/images/villa-infinity.jpg" alt="Villa suspensa sobre as montanhas" class="about-main-img" loading="lazy">
+          <div class="about-badge-float">
+            <h4>100% Carbono Neutro</h4>
+            <p>Construções bioclimáticas de baixo impacto e preservação florestal ativa.</p>
+          </div>
+        </div>
+
+        <div>
+          <span class="badge-tag">Nosso Propósito</span>
+          <h2 class="section-title">Um Santuário para Reconectar Corpo, Mente e Natureza</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+            O LUMINA nasceu do desejo de criar um refúgio que coexistisse em perfeita harmonia com as montanhas e as matas nativas. Cada cabana foi erguida utilizando madeiras de reflorestamento certificado, técnicas nórdicas de isolamento térmico e energia 100% fotovoltaica.
+          </p>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+            Aqui, o tempo desacelera. O céu noturno é livre de poluição luminosa, revelando constelações inteiras através do teto de vidro da sua cama, enquanto as águas puras das nascentes abastecem os ofurôs aquecidos.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-num">150+</div>
+              <div class="stat-label">Hectares de Mata Preservada</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Energia Solar Fotovoltaica</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">4.500+</div>
+              <div class="stat-label">Árvores Nativas Plantadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Testimonials Carousel
+       ======================================================================== -->
+  <section class="section testimonials-section" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Vozes dos Nossos Hóspedes</span>
+        <h2 class="section-title">Histórias Vividas sob as Estrelas</h2>
+        <p class="section-subtitle">Descubra o que torna a estadia no Lumina um marco inesquecível na vida de quem nos visita.</p>
+      </div>
+
+      <div class="testimonial-slider-wrapper">
+        <div class="testimonial-track">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active">
+            <div class="testimonial-quote">
+              “Dormir no Domo Estelar foi uma das experiências mais arrebatadoras da nossa vida. Ver a Via Láctea do aconchego da cama aquecida é indescritível. O café da manhã na cesta de vime é digno de hotel 5 estrelas.”
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MC</div>
+              <div class="author-info">
+                <div class="author-name">Mariana & Carlos Ribeiro</div>
+                <div class="author-stay">Fevereiro 2026 • Domo Estelar</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-quote">
+              “A Villa Panorâmica superou qualquer expectativa! A piscina de borda infinita com vapor subindo no fim de tarde enquanto o sol se punha nas montanhas pareceu pintura. Atendimento impecável e Wi-Fi excelente.”
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">FA</div>
+              <div class="author-info">
+                <div class="author-name">Fernando Albuquerque</div>
+                <div class="author-stay">Janeiro 2026 • Villa Panorâmica</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-quote">
+              “O silêncio do Chalé Aurora e o calor da lareira a lenha nos trouxeram a paz que há anos não sentíamos na cidade. As trilhas privativas para as cachoeiras são mágicas. Já agendamos nosso retorno!”
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">BS</div>
+              <div class="author-info">
+                <div class="author-name">Beatriz Silveira</div>
+                <div class="author-stay">Março 2026 • Chalé Aurora Nórdico</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="btn-icon" id="prev-testimonial" title="Depoimento anterior" aria-label="Anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          
+          <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+
+          <button class="btn-icon" id="next-testimonial" title="Próximo depoimento" aria-label="Próximo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FAQ Section (Accordion)
+       ======================================================================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-tag">Tire Suas Dúvidas</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Tudo o que você precisa saber antes de planejar sua estadia no Lumina.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quais são os horários de check-in e check-out?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Nosso check-in inicia-se a partir das 15:00 e o check-out até às 12:00. Caso necessite de early check-in ou late check-out, basta solicitar com antecedência junto ao nosso concierge (sujeito à disponibilidade).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O refúgio é pet friendly?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim! Amamos animais e aceitamos pets de pequeno e médio porte nas categorias Chalé Aurora e Cabana do Lago. Disponibilizamos caminha confortável, comedouro ecológico e petiscos de cortesia.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como é o acesso e a estrada até a hospedagem?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            O acesso é totalmente viável para carros de passeio comuns. Os últimos 2,5 km são em estrada de terra bem compactada e cascalhada com sinalização dedicada. Também oferecemos serviço de traslado privativo em veículo 4x4.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que está incluso na diária da acomodação?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Todas as diárias incluem café da manhã artesanal servido pontualmente na sua cabana, acesso a todas as trilhas ecológicas particulares, caiaques e stand-up paddles no lago privativo, amenidades orgânicas L'Occitane e Wi-Fi Starlink.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Qual a política de cancelamento ou reagendamento?</span>
+            <span class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Oferecemos cancelamento gratuito ou remarcação flexível até 14 dias antes da data do check-in. Em caso de imprevistos climáticos severos, possibilitamos a remarcação da data sem custos adicionais.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Contact & Location Section
+       ======================================================================== -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="badge-tag">Fale Conosco</span>
+          <h2 class="section-title">Estamos Prontos para Receber Você</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+            Tem dúvidas sobre datas especiais, pedidos de casamento, eventos exclusivos ou necessidades alimentares? Envie-nos uma mensagem!
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-text">
+                <h5>Localização Privilegiada</h5>
+                <p>Serra da Mantiqueira, Km 42 • São Paulo / Minas Gerais</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="info-text">
+                <h5>E-mail de Atendimento VIP</h5>
+                <p>reservas@luminasanctuary.com.br</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="info-text">
+                <h5>Concierge WhatsApp</h5>
+                <p>+55 (11) 99876-5432 (Atendimento 24 horas)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-card">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Seu Nome Completo</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Ex: Ana Clara Mendes" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Seu Melhor E-mail</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="anaclara@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-phone">WhatsApp / Telefone</label>
+              <input type="tel" id="contact-phone" class="form-input" placeholder="(11) 98765-4321" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Mensagem ou Dúvida</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Conte-nos como podemos tornar sua estadia perfeita..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Enviar Mensagem ao Concierge</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#inicio" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+              </svg>
+            </div>
+            <span class="brand-text">LUMINA<span>.</span></span>
+          </a>
+          <p>
+            Refúgio de luxo sustentável e turismo regenerativo. Uma conexão genuína entre o conforto refinado e o esplendor da natureza.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#acomodacoes">Acomodações</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#calculadora">Simular Estadia</a></li>
+            <li><a href="#sobre">O Santuário</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acomodações</h4>
+          <ul class="footer-links">
+            <li><a href="#acomodacoes">Domo Estelar</a></li>
+            <li><a href="#acomodacoes">Chalé Aurora</a></li>
+            <li><a href="#acomodacoes">Villa Panorâmica</a></li>
+            <li><a href="#acomodacoes">Cabana do Lago</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter Exclusiva</h4>
+          <div class="newsletter-box">
+            <p>Receba convites prioritários para noites de observação astronômica e benefícios exclusivos.</p>
+            <form id="newsletter-form" class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Seu e-mail..." required>
+              <button type="submit" class="btn btn-primary btn-sm">Inscrever</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LUMINA Eco Sanctuary & Hospedagem. Todos os direitos reservados.</p>
+        <p>Desenvolvido com HTML5, Vanilla CSS3 & Modern JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Modal: Detalhes da Acomodação
+       ======================================================================== -->
+  <div class="modal-overlay" id="room-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" aria-label="Fechar janela">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <img id="modal-room-img" src="" alt="Foto da acomodação" class="modal-hero-img">
+
+      <div class="modal-body">
+        <span id="modal-room-type" class="badge-tag">Categoria</span>
+        <h2 id="modal-room-title" class="section-title" style="font-size: 1.85rem; margin-top: 0.5rem;">Título</h2>
+        <div id="modal-room-price" style="font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem;">Preço</div>
+        <p id="modal-room-desc" style="color: var(--text-secondary); line-height: 1.6;"></p>
+
+        <h4 style="font-size: 1.05rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem;">Comodidades Inclusas:</h4>
+        <div class="modal-amenities-list" id="modal-amenities">
+          <!-- Amenities dynamically loaded -->
+        </div>
+
+        <button id="modal-reserve-btn" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">
+          <span>Reservar Esta Acomodação</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Modal: Finalização da Reserva (Checkout Simulator)
+       ======================================================================== -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-content" style="max-width: 540px;">
+      <button class="modal-close-btn" aria-label="Fechar janela">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <div class="modal-body" style="padding: 2.25rem;">
+        <span class="badge-tag">Etapa Final</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.7rem; font-weight: 700; margin: 0.5rem 0 0.25rem;">Confirmar sua Reserva</h3>
+        <p id="checkout-room-summary" style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Resumo da estadia</p>
+
+        <form id="checkout-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-group">
+            <label for="guest-name">Nome do Hóspede Principal</label>
+            <input type="text" id="guest-name" class="form-input" placeholder="Ex: Lucas Martins" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-email">E-mail para Confirmação e Voucher</label>
+            <input type="email" id="guest-email" class="form-input" placeholder="lucas@exemplo.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-phone">WhatsApp para Contato do Concierge</label>
+            <input type="tel" id="guest-phone" class="form-input" placeholder="(11) 98765-4321" required>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-notes">Observações ou Celebração Especial (Opcional)</label>
+            <input type="text" id="guest-notes" class="form-input" placeholder="Ex: Aniversário de casamento, pedido especial de flores...">
+          </div>
+
+          <div style="background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-secondary);">
+            🔒 <strong>Reserva 100% Segura</strong>. Pagamento facilitado em até 6x sem juros ou 5% de desconto via Pix.
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 0.5rem;">
+            <span>Concluir Reserva com Sucesso</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js" defer></script>
+</body>
+</html>
